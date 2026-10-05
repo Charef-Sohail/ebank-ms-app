@@ -1,4 +1,4 @@
-package com.enset.ebankservice.entities;
+package com.enset.ebankservice.model;
 
 import lombok.*;
 

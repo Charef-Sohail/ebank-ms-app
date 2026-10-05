@@ -1,4 +1,4 @@
-package com.enset.ebankservice.repositories;
+package com.enset.ebankservice.repository;
 
 import com.enset.ebankservice.entities.BankAccount;
 import org.springframework.data.jpa.repository.JpaRepository;
