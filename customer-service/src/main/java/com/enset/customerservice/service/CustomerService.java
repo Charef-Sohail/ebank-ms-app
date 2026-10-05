@@ -1,8 +1,7 @@
-package com.enset.cusotmerservice.service;
+package com.enset.customerservice.service;
 
-import com.enset.cusotmerservice.entities.Customer;
-import com.enset.cusotmerservice.repository.CustomerRepository;
-import lombok.AllArgsConstructor;
+import com.enset.customerservice.entities.Customer;
+import com.enset.customerservice.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

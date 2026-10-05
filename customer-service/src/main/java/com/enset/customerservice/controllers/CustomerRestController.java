@@ -1,7 +1,7 @@
-package com.enset.cusotmerservice.controllers;
+package com.enset.customerservice.controllers;
 
-import com.enset.cusotmerservice.entities.Customer;
-import com.enset.cusotmerservice.service.CustomerService;
+import com.enset.customerservice.entities.Customer;
+import com.enset.customerservice.service.CustomerService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
