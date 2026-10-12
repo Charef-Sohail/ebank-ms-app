@@ -15,5 +15,4 @@ public class EBankService {
     public List<BankAccount> getAllBankAccounts() {
         return bankAccountRepository.findAll();
     }
-
 }
