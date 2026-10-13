@@ -20,12 +20,13 @@ public class EBankService {
     @Autowired
     private CustomerRestClient customerRestClient;
 
-
+    @McpTool(description = "Get all of bank accounts")
     public List<BankAccount> getAllBankAccounts() {
         return bankAccountRepository.findAll();
     }
 
-    public BankAccount getBankAccountById(String id) {
+    @McpTool(description = "Get a bank account by id")
+    public BankAccount getBankAccountById(@McpToolParam("The bank account id") String id) {
         BankAccount bankAccount = bankAccountRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Account not found"));
         Customer customer = customerRestClient.getCustomerById(bankAccount.getCustomerId());
@@ -35,7 +36,8 @@ public class EBankService {
     }
 
 
-    public BankAccount saveBankAccount(BankAccount bankAccount) {
+    @McpTool(description = "Save a new bank Account")
+    public BankAccount saveBankAccount(@McpToolParam("The bank account to save(balance, type, customer)") BankAccount bankAccount) {
         try {
             Customer customer = customerRestClient.getCustomerById(bankAccount.getCustomerId());
             if (customer != null) {
